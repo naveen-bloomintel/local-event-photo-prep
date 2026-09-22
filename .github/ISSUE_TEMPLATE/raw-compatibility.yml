@@ -1,0 +1,47 @@
+name: RAW compatibility report
+description: Report a RAF or NEF preview or metadata problem without uploading a private photo.
+title: "[RAW] "
+labels: ["raw-compatibility"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Run `.venv/bin/event-photo-prep doctor /path/to/sample.RAF` and remove personal paths before posting. Do not attach client photographs without permission.
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Sanitized doctor output
+      render: json
+    validations:
+      required: true
+  - type: input
+    id: camera
+    attributes:
+      label: Camera and firmware
+    validations:
+      required: true
+  - type: input
+    id: compression
+    attributes:
+      label: RAW compression mode
+      placeholder: Uncompressed, lossless compressed, or compressed
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and Mac architecture
+    validations:
+      required: true
+  - type: textarea
+    id: review_error
+    attributes:
+      label: Error from review.json
+      description: Remove event names and absolute paths.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: I removed client names, event paths, and private image data.
+          required: true

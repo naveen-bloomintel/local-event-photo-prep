@@ -1,0 +1,50 @@
+# Local environments and developer tooling
+.venv/
+.venv-*/
+.DS_Store
+._*
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+.agents/
+.claude/
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+secrets.toml
+credentials.json
+service-account*.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Private event data and generated output
+_photo_ai/
+*_Lightroom_KEEP*/
+*.sqlite
+*.sqlite3
+*.db
+*.lrcat
+*.lrcat-data/
+*.lrdata/
+*.[Rr][Aa][Ff]
+*.[Nn][Ee][Ff]
+*.[Cc][Rr]2
+*.[Cc][Rr]3
+*.[Aa][Rr][Ww]
+*.[Dd][Nn][Gg]
+sample_event/**/*.xmp*
+
+# Packaging
+dist/
+build/
+*.egg-info/
+*.zip

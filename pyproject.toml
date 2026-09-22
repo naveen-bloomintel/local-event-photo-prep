@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "local-event-photo-prep"
+version = "2.2.0"
+description = "Free, local-first event photo culling and per-photo Lightroom XMP preparation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+  { name = "Naveen Benjamin" },
+]
+keywords = ["photography", "photo-culling", "lightroom", "xmp", "raw", "streamlit"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: End Users/Desktop",
+  "Operating System :: MacOS",
+  "Programming Language :: Python :: 3",
+  "Topic :: Multimedia :: Graphics",
+]
+dependencies = [
+  "Pillow>=10.0",
+  "numpy>=1.24",
+  "ImageHash>=4.3",
+  "PyYAML>=6.0",
+  "typer>=0.12",
+  "rich>=13.0",
+  "streamlit>=1.64,<2",
+  "rawpy>=0.25,<1",
+]
+
+[project.optional-dependencies]
+vision = ["opencv-python-headless>=4.9,<6"]
+dev = ["pytest>=8.0", "ruff>=0.12"]
+all = ["opencv-python-headless>=4.9,<6", "pytest>=8.0", "ruff>=0.12"]
+
+[project.scripts]
+event-photo-prep = "event_photo_prep.cli:app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+event_photo_prep = ["assets/*.onnx", "assets/YUNET_LICENSE.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

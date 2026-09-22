@@ -1,0 +1,23 @@
+preview:
+  max_edge: 1600
+  jpeg_quality: 88
+analysis:
+  burst_seconds: 2.5
+  duplicate_hash_distance: 10
+  strict_duplicate_hash_distance: 10
+  duplicate_structure_distance: 8
+  duplicate_color_distance: 65
+  keep_score: 62
+  alt_score: 47
+  hero_score: 82
+  people_selection_weight: 0.45
+  soft_face_reject_threshold: 55
+  soft_face_recovery_threshold: 72
+  workers: 0
+editing:
+  max_exposure: 1.25
+  max_temperature_shift: 900
+  enable_lens_profile: true
+safety:
+  output_folder: _photo_ai
+  xmp_backup_suffix: .event-photo-prep-backup

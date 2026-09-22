@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If Local Event Photo Prep helps your work, please cite it using this metadata."
+title: "Local Event Photo Prep"
+type: software
+authors:
+  - family-names: "Benjamin"
+    given-names: "Naveen"
+version: 2.2.0
+date-released: 2026-09-22
+license: MIT
+abstract: >-
+  A free, local-first event photo culling and Adobe Lightroom XMP preparation
+  workflow with explainable technical scoring and nondestructive export.
+repository-code: "https://github.com/naveen-bloomintel/local-event-photo-prep"
