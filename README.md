@@ -1,18 +1,68 @@
-# Local Event Photo Prep
+<p align="center">
+  <img src="docs/assets/social-preview.jpg" alt="Local Event Photo Prep — local-first event photo culling and Lightroom preparation" width="100%">
+</p>
 
-Free, local-first event photo culling and Lightroom XMP preparation.
+<h1 align="center">Local Event Photo Prep</h1>
 
-Local Event Photo Prep analyzes event photographs on your Mac, groups similar
-frames, recommends the strongest moments, and prepares selected RAW files with
-individual Adobe Lightroom Classic XMP settings. Photographs stay on your
-computer: there is no account, cloud upload, telemetry, subscription, or API
-key.
+<p align="center"><strong>Cull locally. Keep RAWs private. Finish in Lightroom.</strong></p>
+
+<p align="center">
+  <a href="https://github.com/naveen-bloomintel/local-event-photo-prep/releases/latest"><strong>Download latest release</strong></a>
+  · <a href="#quick-start">Quick start</a>
+  · <a href="#recommended-workflow">How it works</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/naveen-bloomintel/local-event-photo-prep/actions/workflows/tests.yml"><img alt="Tests" src="https://github.com/naveen-bloomintel/local-event-photo-prep/actions/workflows/tests.yml/badge.svg?branch=main"></a>
+  <img alt="macOS" src="https://img.shields.io/badge/macOS-supported-252731?logo=apple">
+  <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-252731?logo=python&logoColor=white">
+  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-ff4b4b"></a>
+</p>
+
+Local Event Photo Prep is a free, local-first photo-culling assistant for event
+photographers. It uses explainable on-device computer vision to group similar
+frames, recommend strong moments, and prepare approved RAW files with
+individual Adobe Lightroom Classic XMP settings.
+
+Your photographs stay on your Mac. There is no account, cloud upload,
+telemetry, subscription, or API key.
 
 > **Beta software:** Always keep an independent backup and review important
 > photographs before delivery. Automated scores assist a photographer; they do
 > not replace creative judgment.
 
-## Highlights
+## Why photographers use it
+
+- **Private by design:** analysis happens locally and photographs are never
+  uploaded.
+- **Non-destructive:** source photographs are never moved, renamed, deleted, or
+  modified by the recommended workflow.
+- **Photographer-controlled:** every KEEP, ALT, REJECT, and edit recommendation
+  can be reviewed or overridden.
+- **Lightroom-ready:** approved RAW files and matching XMP sidecars are copied
+  into a clean import folder.
+
+If this project saves you time after an event, please consider
+[starring the repository](https://github.com/naveen-bloomintel/local-event-photo-prep). It helps other photographers find it.
+
+## Quick start
+
+Requirements: macOS and Python 3.10 or newer.
+
+```bash
+git clone https://github.com/naveen-bloomintel/local-event-photo-prep.git
+cd local-event-photo-prep
+chmod +x install_macos.sh run_event_photo_prep.sh
+./install_macos.sh
+./run_event_photo_prep.sh
+```
+
+The installer creates a private `.venv`, installs RAW and face-detection
+support, and checks the decoder. See the
+[latest release](https://github.com/naveen-bloomintel/local-event-photo-prep/releases/latest)
+for versioned downloads and release notes.
+
+## What it does
 
 - Scans nested event folders containing mixed cameras and formats.
 - Supports RAF, NEF, DNG, ARW, CR2/CR3 when the installed RAW decoder can read
@@ -47,21 +97,7 @@ backed up before the optional advanced source-side workflow replaces them.
 No credentials are required. Never commit client photographs, event databases,
 Lightroom catalogs, `.env` files, or `.streamlit/secrets.toml` to a fork.
 
-## Installation on macOS
-
-Requirements: macOS and Python 3.10 or newer.
-
-```bash
-git clone https://github.com/naveen-bloomintel/local-event-photo-prep.git
-cd local-event-photo-prep
-chmod +x install_macos.sh run_event_photo_prep.sh
-./install_macos.sh
-./run_event_photo_prep.sh
-```
-
-The installer creates a private `.venv`, installs the project with RAW and
-face-detection support, and checks the decoder. For richer metadata and another
-embedded-preview fallback, install ExifTool:
+For richer metadata and another embedded-preview fallback, install ExifTool:
 
 ```bash
 brew install exiftool
@@ -172,9 +208,9 @@ before sharing examples, especially when they may contain faces or private
 event information.
 
 Local Event Photo Prep was created by **Naveen Benjamin**. If this project helps
-your work, starring the repository, linking to it, or citing it using
-[CITATION.cff](CITATION.cff) helps others discover the project while preserving
-creator credit.
+your work, [star the repository](https://github.com/naveen-bloomintel/local-event-photo-prep),
+link to it, or cite it using [CITATION.cff](CITATION.cff). Each helps other
+photographers discover the project while preserving creator credit.
 
 ## Third-party software
 

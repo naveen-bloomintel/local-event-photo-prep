@@ -38,6 +38,10 @@ Suggested topics:
 `photography`, `photo-culling`, `lightroom`, `xmp`, `raw`, `streamlit`,
 `computer-vision`, `privacy`, `macos`, `open-source`
 
+Upload [`assets/social-preview.jpg`](assets/social-preview.jpg) in **Settings →
+Social preview**. Use the name, tagline, palette, expanded topic list, and
+screenshot privacy rules in [`BRAND.md`](BRAND.md).
+
 After the first successful CI run, create a `v2.2.0` release from the changelog.
 Add privacy-safe screenshots or a short demo made only with the generated sample
 event. GitHub recognizes `CITATION.cff` and presents citation information on the
